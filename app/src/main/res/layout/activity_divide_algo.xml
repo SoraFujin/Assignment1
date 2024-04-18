@@ -17,95 +17,60 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052"
-        app:srcCompat="@drawable/dynam" />
+        app:srcCompat="@drawable/div" />
 
     <TextView
         android:id="@+id/sortalgo_text"
-        android:layout_width="415dp"
-        android:layout_height="105dp"
-        android:text="What Is Dynamic Programming?
-Dynamic programming is a computer programming technique where an algorithmic problem is first broken down into sub-problems, the results are saved, and then the sub-problems are optimized to find the overall solution — which usually has to do with finding the maximum and minimum range of the algorithmic query. "
+        android:layout_width="379dp"
+        android:layout_height="73dp"
+        android:text="The divide-and-conquer technique involves taking a large-scale problem and dividing it into similar sub-problems of a smaller scale and recursively solving each of these sub-problems."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.638"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
-
-    <ImageView
-        android:id="@+id/insertion_sort"
-        android:layout_width="114dp"
-        android:layout_height="116dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476"
-        app:srcCompat="@drawable/dp" />
-
-    <ImageView
-        android:id="@+id/merge_sort"
-        android:layout_width="134dp"
-        android:layout_height="123dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707"
-        app:srcCompat="@drawable/howdynam" />
-
-    <ImageView
-        android:id="@+id/quick_sort"
-        android:layout_width="114dp"
-        android:layout_height="116dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93"
-        app:srcCompat="@mipmap/ic_launcher_quick_sort" />
+        app:layout_constraintVertical_bias="0.256" />
 
     <TextView
         android:id="@+id/insertion_sort_text"
-        android:layout_width="242dp"
-        android:layout_height="147dp"
-        android:text="How Does Dynamic Programming (DP) Work?
-Identify Subproblems: Divide the main problem into smaller, independent subproblems.
-Store Solutions: Solve each subproblem and store the solution in a table or array.
-Build Up Solutions: Use the stored solutions to build up the solution to the main problem.
-Avoid Redundancy: By storing solutions, DP ensures that each subproblem is solved only once, reducing computation time."
+        android:layout_width="358dp"
+        android:layout_height="122dp"
+        android:text="Divide And Conquer
+This technique can be divided into the following three parts:\n
+Divide: This involves dividing the problem into smaller sub-problems.\n
+Conquer: Solve sub-problems by calling recursively until solved.'n
+Combine: Combine the sub-problems to get the final solution of the whole problem."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.408" />
 
     <TextView
         android:id="@+id/quick_sort_text"
-        android:layout_width="239dp"
-        android:layout_height="136dp"
-        android:text="The dynamic programming algorithm tries to find the shortest way to a solution when solving a problem. It does this by going from the top down or the bottom up. The top-down method solves equations by breaking them into smaller ones and "
+        android:layout_width="364dp"
+        android:layout_height="160dp"
+        android:text="The following are some standard algorithms that follow Divide and Conquer algorithm.
+
+Quicksort is a sorting algorithm. The algorithm picks a pivot element and rearranges the array elements so that all elements smaller than the picked pivot element move to the left side of the pivot, and all greater elements move to the right side. Finally, the algorithm recursively sorts the subarrays on the left and right of the pivot element."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.667" />
 
     <TextView
         android:id="@+id/merge_sort_text"
-        android:layout_width="236dp"
-        android:layout_height="129dp"
-        android:text="Merge sort is a sorting algorithm that follows the divide-and-conquer approach. It works by recursively dividing the input array into smaller subarrays and sorting those subarrays then merging them back together to obtain the sorted array."
+        android:layout_width="359dp"
+        android:layout_height="58dp"
+        android:text="Merge Sort is also a sorting algorithm. The algorithm divides the array into two halves, recursively sorts them, and finally merges the two sorted halves."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946" />
+        app:layout_constraintVertical_bias="0.817" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
