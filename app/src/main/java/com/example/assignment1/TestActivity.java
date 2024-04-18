@@ -1,32 +1,20 @@
 package com.example.assignment1;
 
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.material.tabs.TabLayout;
-
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
-
-    private TextView totalQuestionsTextView;
     private TextView questionTextView;
     private Button ansA, ansB, ansC, ansD;
-    private Button submitBtn;
-
     int score = 0;
     int totalQuestion = QuestionAnswer.questions.length;
     int currentQuestionIndex = 0;
@@ -43,13 +31,13 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
             return insets;
         });
 
-        totalQuestionsTextView = findViewById(R.id.total_questions);
+        TextView totalQuestionsTextView = findViewById(R.id.total_questions);
         questionTextView = findViewById(R.id.questions);
         ansA = findViewById(R.id.ans_a);
         ansB = findViewById(R.id.ans_b);
         ansC = findViewById(R.id.ans_c);
         ansD = findViewById(R.id.ans_d);
-        submitBtn = findViewById(R.id.submit_button);
+        Button submitBtn = findViewById(R.id.submit_button);
 
         ansA.setOnClickListener(this);
         ansB.setOnClickListener(this);

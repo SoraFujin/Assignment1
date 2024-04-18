@@ -9,10 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CustomBaseAdapter extends BaseAdapter {
-
     Context context;
-    String subjects[];
-    int subjectImage[];
+    String[] subjects;
+    int[] subjectImage;
     LayoutInflater inflater;
     public CustomBaseAdapter(Context ctx, String[] subjects, int[] subjectImage){
         this.context = ctx;

@@ -1,14 +1,11 @@
 package com.example.assignment1;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -16,10 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ProfileActivity extends AppCompatActivity {
-
     private SharedPreferences sharedPreferences;
-    private TextView textView_name, textView_ID, textView_email;
-    private Button logOut_button;
     private static final String SHARED_PREF_NAME = "mypref";
     private static final String KEY_NAME= "name";
     private static final String KEY_ID= "ID";
@@ -36,9 +30,9 @@ public class ProfileActivity extends AppCompatActivity {
             return insets;
         });
 
-        textView_name = findViewById(R.id.text_name);
-        textView_ID = findViewById(R.id.text_ID);
-        textView_email = findViewById(R.id.text_email);
+        TextView textView_name = findViewById(R.id.text_name);
+        TextView textView_ID = findViewById(R.id.text_ID);
+        TextView textView_email = findViewById(R.id.text_email);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
         String name = sharedPreferences.getString(KEY_NAME, null);
@@ -52,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         }
 
-        logOut_button = findViewById(R.id.logout_button);
+        Button logOut_button = findViewById(R.id.logout_button);
         logOut_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

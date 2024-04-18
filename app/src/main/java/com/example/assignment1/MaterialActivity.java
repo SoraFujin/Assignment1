@@ -10,31 +10,23 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Switch;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.List;
-
 public class MaterialActivity extends AppCompatActivity {
-    private String subjects[] = {"Sorting Algorithms", "Daynamic Algorithms", "Analysis of Algorithm", "Divide and Conquer"};
-    private int subjectImage[] = {R.mipmap.ic_launcher_sort, R.mipmap.ic_launcher_dynamicc, R.mipmap.ic_launcher_analysis, R.mipmap.ic_launcher_divid_conquer};
-    private ListView listView;
-
+    private final String[] subjects = {"Sorting Algorithms", "Daynamic Algorithms", "Analysis of Algorithm", "Divide and Conquer"};
+    private final int[] subjectImage = {R.mipmap.ic_launcher_sort, R.mipmap.ic_launcher_dynamicc, R.mipmap.ic_launcher_analysis, R.mipmap.ic_launcher_divid_conquer};
     private ArrayAdapter<String> arrayAdapter;
-
-    private SearchView searchView;
     private Switch switcher;
     private boolean nightMODE;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
-    private TabLayout tabLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +64,7 @@ public class MaterialActivity extends AppCompatActivity {
             }
         });
 
-        tabLayout = findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
@@ -103,9 +95,8 @@ public class MaterialActivity extends AppCompatActivity {
 
             }
         });
-        //TODO life cycle methods OnStart-OnPause-OnCreate ... etc:
 
-        listView = (ListView) findViewById(R.id.subjects);
+        ListView listView = (ListView) findViewById(R.id.subjects);
         CustomBaseAdapter customBaseAdapter = new CustomBaseAdapter(getApplicationContext(), subjects, subjectImage);
         listView.setAdapter(customBaseAdapter);
 
@@ -127,7 +118,7 @@ public class MaterialActivity extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         //listView.setAdapter(arrayAdapter);
-        searchView = findViewById(R.id.search);
+        SearchView searchView = findViewById(R.id.search);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
